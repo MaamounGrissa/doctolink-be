@@ -26,18 +26,27 @@ dotenv.config();
 
 app.enable("trust proxy");
 
-app.use(
+/* app.use(
   cors({
     origin: [
       "https://doctolink-frontend-rust.vercel.app",
       "https://docto-link.com",
-      "https://doctolink-fe.vercel.app",
+      "https://doctolink-fe.vercel.app/",
       "http://localhost:3000",
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
+); */
+
+app.use(
+  cors({
+    origin: "*",
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
 );
+
 app.use(
   bodyParser.json({
     limit: "50mb",
