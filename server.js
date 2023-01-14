@@ -30,6 +30,8 @@ app.use(
   cors({
     origin: [
       "https://doctolink-frontend-rust.vercel.app",
+      "https://docto-link.com",
+      "https://doctolink-fe.vercel.app",
       "http://localhost:3000",
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],
@@ -75,6 +77,7 @@ io.on("connection", (socket) => {
   });
 });
 
+app.use("/", console.log("Server is running..."));
 app.use(auth);
 app.use(users);
 app.use(establishments);
