@@ -77,7 +77,6 @@ io.on("connection", (socket) => {
   });
 });
 
-app.use("/", console.log("Server is running..."));
 app.use(auth);
 app.use(users);
 app.use(establishments);
