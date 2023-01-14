@@ -138,7 +138,7 @@ export const login = async (req, res) => {
         ...doctorInfo[0]?._doc,
       });
     } else {
-      res.status(400).json("Password incorrect !");
+      res.status(400).json("Password incorrect!");
     }
   } else {
     res.status(400).json("Account not found !");
