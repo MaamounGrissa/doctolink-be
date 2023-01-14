@@ -73,6 +73,7 @@ export const getRoom = async (req, res) => {
 
 export const unreadCount = async (req, res) => {
   var count = 0;
+  if (!req.params.id || req.params.id === undefined) return res.status(400).json({ message: "Bad request" });
   const rooms = await Room.find({ establishment: req.params.id }).populate({
     path: "patient messages.sender messages.receiver establishment",
     select: "-password",
