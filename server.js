@@ -31,7 +31,9 @@ app.use(
     origin: [
       "https://doctolink-frontend-rust.vercel.app",
       "https://docto-link.com",
+      "https://www.docto-link.com",
       "https://doctolink-fe.vercel.app",
+      "https://www.doctolink-fe.vercel.app",
       "http://localhost:3000",
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],
