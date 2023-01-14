@@ -29,10 +29,10 @@ app.enable("trust proxy");
 app.use(
   cors({
     origin: [
-      "https://doctolink-frontend-rust.vercel.app/",
-      "https://docto-link.com/",
-      "https://doctolink-fe.vercel.app/",
-      "http://localhost:3000/",
+      "https://doctolink-frontend-rust.vercel.app",
+      "https://docto-link.com",
+      "https://doctolink-fe.vercel.app",
+      "http://localhost:3000",
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
