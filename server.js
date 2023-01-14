@@ -70,7 +70,12 @@ const server = app.listen(PORT, () =>
 
 export const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "https://www.docto-link.com",
+      "https://docto-link.com",
+      "https://doctolink-fe.vercel.app",
+      "https://www.doctolink-fe.vercel.app",
+    ],
   },
 });
 
